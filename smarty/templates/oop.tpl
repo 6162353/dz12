@@ -71,7 +71,7 @@
 <div class="form-group"> 
     <div >
     <label class="form-label-checkbox" for="allow_mails">
-<input type="checkbox" {$allow_mails} value="1" name="allow_mails" id="allow_mails" 
+<input type="checkbox" {$checked_allow_mails} value="1" name="allow_mails" id="allow_mails" 
    class="form-input-checkbox">
 <span class="form-text-checkbox">Я не хочу получать вопросы по объявлению по e-mail</span>
     </label> </div>

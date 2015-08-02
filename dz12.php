@@ -127,19 +127,6 @@ $firePHP->log($categories, '$categories');
 
 
 
-/*if ( isset($_POST['seller_name']) && isset($_POST['title']) 
-        && isset($_POST['price'])
-                
-        )  {
-    
-    //var_dump($_POST);
-    $ad=new BasicAd($_POST);
-    //var_dump($ad);
-    
-    $ad->save();
-    
-} */
-
 
 $main = AdsStore::instance();
 $main->getAllAdsFromDb();
@@ -160,6 +147,7 @@ $main->writeOutAll();
         $main->change_Ad($_GET['id']);
 
         $_POST = null;
+        //var_dump($_GET);
         header('Location:' . $site_dir . '/' . $current_php_script . '.php');
     }
     

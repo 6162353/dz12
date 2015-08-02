@@ -33,6 +33,23 @@ class BasicAd {
         
         $this->user_name = $ad['seller_name'];
         
+        if (isset($ad['seller_name'])) {
+
+            $this->user_name = $ad['seller_name'];
+        }
+        
+        elseif (isset($ad['user_name'])) {
+            
+            $this->user_name = $ad['user_name'];
+            
+        }
+        else {
+            
+            $this->user_name = '';
+            
+        }
+        
+        
         
         if (isset($ad['price'])) {
 
@@ -55,7 +72,14 @@ class BasicAd {
         if (isset($ad['tel'])) {
 
             $this->tel = $ad['tel'];
-        } else {
+        } 
+        elseif (isset($ad['phone'])) {
+            
+            $this->tel = $ad['phone'];
+            
+        }
+        
+        else {
 
             $this->tel = '';
         }
@@ -63,10 +87,18 @@ class BasicAd {
         if (isset($ad['descr'])) {
 
             $this->descr = $ad['descr'];
-        } else {
+        } 
+        elseif (isset($ad['description'])) {
+            
+            
+            $this->descr = $ad['description'];
+        }
+        
+        else {
 
             $this->descr = '';
         }
+        
         
         if (isset($ad['id_city'])) {
 
@@ -79,15 +111,32 @@ class BasicAd {
         if (isset($ad['id_tube_station'])) {
 
             $this->id_tube_station = $ad['id_tube_station'];
-        } else {
+        }
+        
+        elseif (isset($ad['metro_id'])) {
+            
+            
+            $this->id_tube_station = $ad['metro_id'];
+        }
+        
+        else {
 
             $this->id_tube_station = '';
         }
         
+        
         if (isset($ad['id_subcategory'])) {
 
             $this->id_subcategory = $ad['id_subcategory'];
-        } else {
+        }
+                
+        elseif (isset($ad['category_id'])) {
+            
+            
+            $this->id_subcategory = $ad['category_id'];
+        }
+        
+        else {
 
             $this->id_subcategory = '';
         }       
@@ -105,6 +154,12 @@ class BasicAd {
 
             $this->send_to_email = $ad['allow_mails'];
         }
+        
+        elseif (isset($ad['send_to_email'])) {
+
+            $this->send_to_email = $ad['send_to_email'];
+        }
+        
         else {
             
             $this->send_to_email = '';
@@ -303,12 +358,12 @@ class AdsStore {
                 $values_for_form['seller_name'] = $value2['user_name'];
                 $values_for_form['email'] = $value2['email'];
 
-                if ($value2['send_to_email'] == '0' or $value2['send_to_email'] == '') {
+                if ($value2['send_to_email'] == '1') {
 
-                    $values_for_form['allow_mails'] = '';
+                    $values_for_form['allow_mails'] = 'checked';
                 } else {
 
-                    $$values_for_form['allow_mails'] = 'checked';
+                    $$values_for_form['allow_mails'] = '';
                 }
 
 
@@ -363,7 +418,7 @@ class AdsStore {
             $vars['send_to_email'] = '0';
         }
         
-        
+        //var_dump($vars);
         $ad->edit($vars);
         
         

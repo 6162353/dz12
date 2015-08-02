@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/test2/smarty/templates/oop.tpl</file>
-            <file>file:/var/www/test2/install.php</file>
-            <file>file:/var/www/test2/dz11.php</file>
-            <file>file:/var/www/test2/dz10.php</file>
-            <file>file:/var/www/test2/dz9.php</file>
-            <file>file:/var/www/test2/dz12.php</file>
-            <file>file:/var/www/test2/smarty/templates/table_row.tpl.html</file>
-            <file>file:/var/www/test2/smarty/templates/table.tpl.html</file>
+            <file>file:/var/www/dz12/Ad.class.php</file>
+            <file>file:/var/www/dz12/dz12.php</file>
+            <file>file:/var/www/dz12/smarty/templates/table.tpl.html</file>
         </group>
     </open-files>
 </project-private>
